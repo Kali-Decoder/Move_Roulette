@@ -1,26 +1,31 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.16;
+pragma solidity ^0.8.20;
 
 import {Counters} from "@openzeppelin/contracts/utils/Counters.sol";
-
 import {OwnableImmutable} from "./base/OwnableImmutable.sol";
 import {Roles} from "./base/Roles.sol";
 import {ReceiptVerifier} from "./base/ReceiptVerifier.sol";
 import {Pool} from "./base/Pool.sol";
 
+import {EquitoApp} from "./EquitoApp.sol";
+import {bytes64, EquitoMessage} from "./libraries/EquitoMessageLibrary.sol";
+import {IRouter} from "./interfaces/IRouter.sol";
+import {TransferHelper} from "./libraries/TransferHelper.sol";
+import {Errors} from "./libraries/Errors.sol";
+
 error InvalidAddressLength(uint256);
 
-contract Bridge is OwnableImmutable, Roles, ReceiptVerifier, Pool {
+contract Bridge is OwnableImmutable, Roles, ReceiptVerifier, Pool , EquitoApp {
     using Counters for Counters.Counter;
-
     event Sent(Receipt receipt);
     event Claimed(Receipt receipt);
 
     Counters.Counter nonce;
 
-    constructor(address _signer, address _owner)
+    constructor(address _signer, address _owner,address _router)
         Roles(_signer)
         OwnableImmutable(_owner)
+        EquitoApp(_router) 
     {}
 
     function send(
