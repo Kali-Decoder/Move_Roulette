@@ -1,75 +1,109 @@
-# APT-Casino [Place Your Best Move with Move]
+# APT-Casino
 
-We decided to build APT-Casino after witnessing the frustrations and challenges faced by new users in the web3 space and online gambling ecosystems. Traditional online gambling platforms often suffer from issues such as lack of transparency, centralized control, and hidden restrictions. This experience highlighted the need for a transparent, fair, and user-centric gaming platform. Inspired by the potential of Aptos, Petra, and Okto, we set out to create APT-Casino - a platform that provides a safe, enjoyable, and transparent gaming experience.
+One of our team-mate was on etherscan exploring some transactions and saw an advertisement of [https://stake.com/](url) which was giving a 200% bonus on the first deposit, when our team-mate deposited the 120 USDT into this platform they gave him 360 USDT as total balance and when our teammate started playing game he was shocked to see that he was only able to play with $1 per game of Play Plinko Online - Pachinko Casino Game on Stake.com and was unable to increase the betting amount beyond $1 coz he was using the bonus scheme of 200% and when he tried to explore and play other games on the platform he got to know that this platform has cheated him under the name of wager limits.
 
-APT-Casino is an innovative decentralized platform that provides a transparent, fair, and engaging gaming experience on the Aptos blockchain. Our mission is to empower users with true ownership of their assets, fair gameplay, and a secure environment free from exploitative practices. The platform currently features a proof of concept (MVP) of one game, a fully functional roulette game, allowing users to place various types of bets. Powered by Aptos on-chain randomness, the roulette wheel ensures fair and verifiable randomness. APT-Casino also offers a robust lending service where users can deposit tokens from any supported chain as collateral to borrow assets, facilitating seamless gameplay without the need to liquidate their holdings.
+When he tried to withdraw money they showed him this rule list of wager limits which said that if he wanted to withdraw the deposited amount then he had to play $12,300 worth of games this was a big shock for him when he was explained a maths logic by their live support. Thereby, In the hope of getting the deposited money back, he played the game Plinko the entire night and lost all his money.
 
-## Key Features
+He was very annoyed by this and that's how APT-Casino was born, which is a combination of AI, Gamefi and Defi all in one platform where new web3 users can play games, and perform gambling but have a safe, secure, transparent platform that does not scam any of their users. Also, we wanted to address common issues in traditional gaming platforms.
 
-1. **Transparent and Fair Gaming**: Provably fair gameplay utilizing Aptos on-chain randomness module to ensure game outcomes are transparent and verifiably fair.
-2. **Seamless Cross-Chain Integration**: Effortless asset management and transfers between Aptos and other supported networks using Petra and Okto.
-3. **User-Friendly Wallet Integration**: Integrated Petra and Okto wallets provide a secure and user-friendly interface for managing funds, placing bets, and interacting with casino games.
+### Problem
+The traditional online gambling industry is plagued by several issues, including:
+- **Unfair Game Outcomes:** Many platforms manipulate game results, leading to unfair play.
 
-## Technical Architecture
+- **High Fees:** Users face exorbitant fees for deposits, withdrawals, and gameplay.
 
-![captures_chrome-capture-2024-5-16 (7)](https://github.com/Kali-Decoder/Move_Roulette/assets/69464744/25853323-f810-458d-a633-07ba98b2de09)
+- **Restrictive Withdrawal Policies:** Withdrawal limits and conditions often prevent users from accessing their funds.
 
-Building APT-Casino involved the integration of multiple technologies to ensure a robust, transparent, and user-friendly platform. We started by utilizing Aptos capabilities to implement on-chain randomness for fair gameplay. The core gaming logic, specifically for the roulette game, was developed and deployed on the Aptos network, leveraging its fast transaction speeds and secure infrastructure. For user-friendly and secure wallet integration, we incorporated Petra and Okto's embedded wallet technologies, providing a seamless experience for managing funds and interacting with the platform. We also implemented a lending service that allows users to deposit tokens from any supported chain as collateral to borrow assets. The cross-chain compatibility facilitated seamless asset transfers and communication across different blockchain networks.
+- **Bonus Drawbacks:** Misleading bonus schemes trap users with unrealistic wagering requirements.
 
-## TechStack
+- **Lack of True Asset Ownership:** Centralized platforms retain control over user assets, limiting their freedom and security.
 
-- Next.js
-- Javascript
-- Tailwind CSS
-- Move
-- Solidity
-- Petra Wallet SDK
-- Okto Wallet SDK
-- Aptos randomness module: aptos_framework::randomness
+### Solution
+ APT-Casino addresses these problems by offering:
+- **Provably Fair Gaming:** Utilizing Chainlink VRF and Equito's secure data transfers to ensure transparent and fair game outcomes.
 
-## Challenges and Solution
-- **Implementing On-Chain Randomness**
-Ensuring fair play in the casino games was critical, and implementing on-chain randomness was a significant challenge. We utilized Aptos randomness module: aptos_framework::randomness to achieve provably fair outcomes for our games. This required a deep understanding of the randomness mechanisms and careful integration into our smart contracts. All though the docs provided by the Aptos were super useful.
+![APT-Casino - Analog pptx (3)](https://github.com/user-attachments/assets/5e9ad93d-c2ab-4ebf-b4cd-05d349a9744b)
 
-- **Wallet Integration and User Experience**
-Integrating Pedra and Okto's embedded wallet technology presented its own set of challenges. We had to ensure that the wallet packages and versions were compatible to our needs. We worked closely with couple of friends who were previously part of Aptos Winter School IIT Bombay for Pedra integration and aptos github to resolve integration issues and optimize the wallet's functionality for our needs.
+- **Low Fees and Flexible Policies:** Leveraging blockchain efficiency and Equito's scalable data transfers to minimize costs and remove withdrawal restrictions.
 
-- **Ensuring Cross-Chain Compatibility**
-One of the major challenges we faced was ensuring smooth cross-chain compatibility. Integrating multiple blockchains and facilitating seamless asset transfers between them required meticulous planning and extensive testing.
+- **Cross-Chain Asset Transfers:** Leveraging Equito's interoperability, APT-Casino allows users to deposit and withdraw assets across multiple blockchain networks seamlessly. This enhances user convenience and expands the platform's accessibility.
 
-- **Security and Testing**
-Ensuring the security of our platform was a top priority, but it also posed significant challenges. We conducted extensive smart contract testing via test scripts and code reviews to identify and fix potential vulnerabilities. Implementing robust security measures for user funds and encryption of on-chain data was crucial.
+- **Interoperable Smart Contracts:** By utilizing Equito's support for interoperable smart contracts, our games operate efficiently across different chains, ensuring low latency and high security.
 
-- **User Onboarding**
-Simplifying the onboarding process for new users was another challenge. Many users are not familiar with blockchain technology and can find it intimidating. We focused on creating a user-friendly interface and streamlined the onboarding process with Aptos Pedra and Okto easy-to-use wallet solution. This involved iterative design and testing to ensure a smoother user experience.
+- **Flexible Withdrawal Policies:** Providing users unrestricted funds access.
 
-## Bounty Tracks Applied for and Deployed Contracts Link:
-**1. Ace of Spades Track:**
-- **Roulette Contract - aptos_framework::randomness::** https://aptoscan.com/transaction/23795743?network=devnet
-- **Roulette Reward Token Contract**: https://aptoscan.com/module/0x25e6d86a5a7083d9d61e40381e5238ab6d2e785825eba0183cebb6009483dab4/fa_coin?network=devnet
+- **Transparent Bonus Schemes:** Clear and Clean bonus terms without hidden traps.
 
-![captures_chrome-capture-2024-5-16 (5)](https://github.com/Kali-Decoder/Move_Roulette/assets/69464744/dbcba340-d9a9-46fc-a0d6-0b6f0ed8daad)
+- **True Asset Ownership:** Decentralized asset management ensures users have full control over their assets.
 
-**2. Bridge Builder Track:**
-**Cross-Chain Contract (Aptos <-> EVM)**: 
-- Aptos: https://aptoscan.com/transaction/29840524?network=devnet
-- EVM: https://sepolia.etherscan.io/address/0x98C2Cd3F5eA88c2aF0A5f021BAaFC48753DdD379
+### Key Features
+**APT-Casino** offers a multifaceted platform with three main features:
 
-![captures_chrome-capture-2024-5-16 (4)](https://github.com/Kali-Decoder/Move_Roulette/assets/69464744/44eb13ad-7b31-4e24-bbc5-a9301a731f6d)
+**1. AI - Social Aspect:**
+- Users create **AI-generated NFT profile pictures**based on keywords.
+- View a **community leaderboard**.
+- Cross-Chain Identity Verification: Equito enables secure identity features across different networks.
 
-![captures_chrome-capture-2024-5-16 (6)](https://github.com/Kali-Decoder/Move_Roulette/assets/69464744/e1342754-ab09-4984-96bc-7fa8b7a4d2c7)
+**2. GameFi - Gaming Aspect:**
+- **APT-Casino** includes a fully functional **European roulette game**.
+- Users can place various types of bets such as **straight, split, street, corner, six line, column, dozen, red, black, high, low, even, and odd.**
+- The **roulette wheel** randomly generates winning values.**  Equito's secure messaging ensures game logic is executed reliably across chains.
+- Winnings are automatically calculated and transferred to the user's wallet.
 
-**3. Okto Track:**
+**3. Defi - Lending Aspect:**
+- Users can **deposit any tokens on Equito supported chains as collateral to borrow in-game currency (APTC)** such that if the user holding is in Equito token and if the value of Equito token goes up by 10% in markets then the value of the collateral goes up by 10% and users can enjoy playing games/ gambling without facing any financial losses as the in-game currency(APTC) is stable and has nothing to deal with collateral but if the collateral value hits a negative threshold of -10% in 24 hours then the APTC token will also be deducted in a similar manner just like the case with mortgage NFT platform Ordinals.
+- Facilitates gameplay without the need to sell existing holdings.
+- Ensures players have the necessary assets to participate in games seamlessly using real-time asset prices.
 
-![photo_6302910746954152863_y](https://github.com/Kali-Decoder/Move_Roulette/assets/69464744/4eb71a31-be92-4fa5-a64e-7270447eacec)
+**Diverse Game Selection:** A variety of fully on-chain games, including roulette, mines, wheel of luck, blackjack, plinko, and more. As a (POC) Proof of Concept we developed fully on-chain Roulette but a similar model can be applied to introduce the new casino games to the platform.
 
----
+![APT-Casino - Analog pptx (2)](https://github.com/user-attachments/assets/51139e0b-bf3c-4e60-b683-e6b40747e9c5)
 
-### Platform UI 
-![IMAGE 2024-06-16 04:36:24](https://github.com/Kali-Decoder/Move_Roulette/assets/82640789/7ad111b0-f24e-466f-96b7-ad1a03b4cab3)
-![IMAGE 2024-06-16 04:36:22](https://github.com/Kali-Decoder/Move_Roulette/assets/82640789/477bf1b5-abe9-4b0d-a510-fb09e9db6d29)
-![IMAGE 2024-06-16 04:36:20](https://github.com/Kali-Decoder/Move_Roulette/assets/82640789/4047e5c0-6eaf-4320-8d08-722c9438fdf2)
-![IMAGE 2024-06-16 04:36:14](https://github.com/Kali-Decoder/Move_Roulette/assets/82640789/14c9d9d5-14b4-4c1e-8e02-7b69878813d2)
-![IMAGE 2024-06-16 04:36:25](https://github.com/Kali-Decoder/Move_Roulette/assets/82640789/d4e3b1dd-0627-469c-9956-38a9f3c95516)
-![photo_6302910746954152892_y](https://github.com/Kali-Decoder/Move_Roulette/assets/69464744/e453cd11-7830-4906-aafc-27c390b3fc80)
-<img width="1470" alt="Screenshot 2024-06-16 at 11 15 07 AM" src="https://github.com/Kali-Decoder/Move_Roulette/assets/69464744/d0931c87-d5bb-4ab9-9fae-66d6a517ef9a">
+![APT-Casino - Analog pptx (4)](https://github.com/user-attachments/assets/bbe173c3-f1f4-47a5-86f8-082eda71939a)
+
+![APT-Casino - Analog pptx (7)](https://github.com/user-attachments/assets/dbf476bb-56bc-41bc-8c40-9037eab00177)
+
+### Deployed Contracts:
+
+Equito is used to transfer funds to other chains, So let's say you are playing games on opBNB Testnet right? So you need some in-game currency (APTC Token) on the opBNB Testnet to play that game but APT-Casino is deployed on Sepolia, so we are using EQUITO APP Contracts as cross-chain communication between the Sepolia and opBNB Testnet, and transfer your tokens on opBNB Testnet and at last you can plan any APT-Casino games by the help of APTC Token on any of the destination chain. So here we are using this Equito Cross-chain communication protocol to solve this problem.
+
+As a Proof of Concept(POC) Sepolia to opBNB using Equito:
+
+**Bridge contract deployed on Sepolia:**
+https://sepolia.etherscan.io/tx/0xee2b692e213982aae459f4024e4cef0374e5b065789d7c52416aa376a6a8c9c1
+
+**opBNB contract deployed:**
+https://opbnb-testnet.bscscan.com/tx/0xb852480857f76fa430ea515dc2b5502cf015af99ee58866e052ad1f6912d674d
+
+**Sepolia to opBNB by use of Equito.**
+
+### What's next
+All though started as an idea but now we are thinking of carrying it forward as a business model and expanding further.
+
+- Applying for Grants: Seeking funding to further develop and expand the platform.
+
+- Mainnet Launch: Deploying on the mainnet for real-world use.
+
+- User Testing: Conducting extensive user testing to refine the platform, we conducted 100 user testing on testnet.
+
+- Promoting the Product: Marketing to attract a wider audience.
+
+- Introducing new games to the platform.
+
+- Explore additional DeFi features like staking, farming, yield strategies to offer more financial services within the platform.
+
+- We aim to implement gasless transactions to enhance user convenience.
+
+- Enabling Developers to build more transparent games in our platform, We can pivot our current platform to game launchpad too but we stick to the decisions of Equito judges, mentors and our future Equito advisors, angel investors, VCs and so on.
+
+- Bringing in new monetization schemas to compensate the casino games/ game creators.
+
+- Having an in-built live streaming, for gameplay we may utilize livepeer/ lens/ huddle01 for this feature and allow players to do streaming within the application.
+
+- We also plan to introduce an in-game chat feature where gamblers/ gamers/ our users can chat and predict the outcome of the games so making its perspective and narrative towards SOCIALFI as well.
+
+We want to be the biggest gamefi/ gambling / games hub centre of the gaming and gambling industry.
+
+By integrating Equito's cross-chain interoperability protocol, APT-Casino not only addresses the fundamental issues in traditional online gambling but also sets a new standard for what a decentralized gaming platform can achieve. Equito's technology is central to our mission of providing a fair, transparent, and user-centric gaming experience.
+
+We look forward to the judges' feedback and are eager to continue our collaboration with Equito to revolutionize the online gaming industry.
