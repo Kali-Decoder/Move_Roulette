@@ -44,6 +44,14 @@ const config: HardhatUserConfig = {
         process.env.SIGNER_PRIVATE_KEY,
       ],
     },
+    crossfi: {
+      url: process.env.CROSSFI_URL || "https://rpc.testnet.ms",
+      accounts: [
+        process.env.DEPLOYER_PRIVATE_KEY,
+        process.env.OWNER_PRIVATE_KEY,
+        process.env.SIGNER_PRIVATE_KEY,
+      ],
+    },
   },
   gasReporter: {
     enabled: process.env.REPORT_GAS !== undefined,
