@@ -67,16 +67,6 @@ The traditional online gambling industry is plagued by several issues, including
 
 Equito is used to transfer funds to other chains, So let's say you are playing games on opBNB Testnet right? So you need some in-game currency (APTC Token) on the opBNB Testnet to play that game but APT-Casino is deployed on Sepolia, so we are using EQUITO APP Contracts as cross-chain communication between the Sepolia and opBNB Testnet, and transfer your tokens on opBNB Testnet and at last you can plan any APT-Casino games by the help of APTC Token on any of the destination chain. So here we are using this Equito Cross-chain communication protocol to solve this problem.
 
-As a Proof of Concept(POC) Sepolia to opBNB using Equito:
-
-**Bridge contract deployed on Sepolia:**
-https://sepolia.etherscan.io/tx/0xee2b692e213982aae459f4024e4cef0374e5b065789d7c52416aa376a6a8c9c1
-
-**opBNB contract deployed:**
-https://opbnb-testnet.bscscan.com/tx/0xb852480857f76fa430ea515dc2b5502cf015af99ee58866e052ad1f6912d674d
-
-**Sepolia to opBNB by use of Equito.**
-
 ### What's next
 All though started as an idea but now we are thinking of carrying it forward as a business model and expanding further.
 
